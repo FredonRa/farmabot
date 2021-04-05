@@ -442,6 +442,10 @@ section article .containerFotos .centro img {
 
 /* mediaqueries para fotos cel */
 @media (max-width: 568px){
+    section article .containerFotos .fotoCel img{
+        margin-top: 15px;    
+    }
+
     section article .containerFotos .der{
         flex-direction: column-reverse;
     }
