@@ -1,8 +1,3 @@
-// import AOS from 'aos';
-// ScrollReveal().reveal('.fotoCel');
-
-AOS.init();
-
 const menuIcon = document.querySelector(".hamburger-menu");
 const navbar = document.querySelector(".navbar2");
 
@@ -38,11 +33,14 @@ window.addEventListener('load', (event) => {
   }, 1000)
 });
 
-//ScrollReveal
 
-// window.sr = ScrollReveal();
-
-// sr.reveal('.divFade', {
-//   duration: 800
-// });
-
+$(window).on('scroll',function(){
+	let scrollBottom = $(document).height() - $(window).height() - $(window).scrollTop();
+  // console.log(scrollBottom);
+  if(scrollBottom < 200) {
+    // wspButton.style.display = "none"
+    $(".wsp-icon").css("display", "none");
+  } else {
+    $(".wsp-icon").css("display", "block");
+  }
+}).trigger('scroll');

@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="./loader.css">
-    <link href="./dist/wpp_css/whatsappButton.css" rel="stylesheet" />
+    <!-- <link href="./dist/wpp_css/whatsappButton.css" rel="stylesheet" /> -->
     <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
@@ -21,7 +21,7 @@
     <header id="header" class="header">
         <img src="./assets/logo.png" alt="logo FarmaBot" id="logo">
         <div class="navbar1">
-            <a href="#" style="color: #75C4AC;">CARACTERÍSTICAS</a>
+            <a href="#caracteristicas" style="color: #75C4AC;">CARACTERÍSTICAS</a>
             <!-- <a href="#">PRECIOS</a> -->
             <a href="#">CLIENTES</a>
         </div>
@@ -33,16 +33,16 @@
         <nav class="navbar2">
             <ul class="nav-list">
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Características</a>
+                    <a href="#caracteristicas" class="nav-link">Características</a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a href="#" class="nav-link">Precios</a>
-                </li>
+                </li> -->
                 <li class="nav-item">
                     <a href="#" class="nav-link">Clientes</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Geco | Technology and Services</a>
+                    <a href="https://www.geco.com.ar/" target="_blank" class="nav-link">Geco | Technology and Services</a>
                 </li>
                 <li class="nav-item">
                     <br>
@@ -53,8 +53,9 @@
           </nav>
     </header>
     
-        
-
+    <div class="wsp-icon">
+        <a href="https://api.whatsapp.com/send/?phone=5491123886977&text=Hola%2C+quiero+probar+FarmaBot.&app_absent=0" target="_blank"><img src="./assets/wsp-icon.png" alt=""></a>
+    </div>
     <section id="home">
         <article class="home" >
             <!-- <img src="./img/firuletes.png" alt=""> -->
@@ -67,7 +68,7 @@
             </div>
             <video class="animate__animated animate__fadeInUp animate__fast" style="margin: 0 auto;width: 100%; max-width: 500px;" autoplay loop muted playsinline>
                 <source src="./assets/video_sin_tarjeta_sin_sonido.webm" type="video/webm">
-              </video>
+            </video>
         </article>
         <article>
             <div class="container">
@@ -94,6 +95,7 @@
                         <p>Unificá todas las comunicaciones en un herramienta. Analizá los canales de contacto, el seguimiento y resolución de cada comunicación. Todo tu equipo trabjando con la información de tus clientes para hacer un seguimiento 100% eficiente y optimizar tu gestión comercial.</p>
                     </div>
                 </div>
+                <div id="caracteristicas"></div>
             </div>
         </article>
         <article>
@@ -143,21 +145,23 @@
             <div class="containerImg"><img src="./assets/logofarmabotblanco.png" alt="logo"></div>
             <div class="containerRedes min">
                 <div class="containerIconos">
-                    <i class="fab fa-linkedin-in icono"></i>
+                    <!-- <i class="fab fa-linkedin-in icono"></i>
                     <i class="fab fa-facebook-f icono"></i>
-                    <i class="fab fa-instagram icono"></i>
+                    <i class="fab fa-instagram icono"></i> -->
                 </div>
                 <p>© 2021<br>by | Geco Technology & Services.</p>
             </div>
         </div>
         <div class="containerMano">
-            <img src="./assets/descarga.png" alt="">
+            <a href="https://www.geco.com.ar/" target="_blank">
+                <img src="./assets/descarga.png" alt="">
+            </a>
             <div class="containerRedes max">
-                <div class="containerIconos">
+                <!-- <div class="containerIconos">
                     <i class="fab fa-linkedin-in icono"></i>
                     <i class="fab fa-facebook-f icono"></i>
                     <i class="fab fa-instagram icono"></i>
-                </div>
+                </div> -->
                 <p>© 2021<br>by | Geco Technology & Services.</p>
             </div>
         </div>
@@ -166,9 +170,14 @@
     <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
     <script>
         AOS.init();
-        </script>
+    </script>
+    <script
+        src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+        integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+        crossorigin="anonymous">
+    </script>
     <script src="./main.js"></script>
-    <script src="/dist/wpp_js/whatsappButton.js"></script>
-    <script> new WhatsappButton('5491123886977', '¿En qué te podemos ayudar?', '¡Estamos a su servicio! Su consulta no molesta.', 'Hola, quiero probar FarmaBot.', '1', '#75C4AC', '#E8EAE9', 'white', 'https://fonts.googleapis.com/css?family=Roboto&display=swap');</script>
+    <!-- <script src="/dist/wpp_js/whatsappButton.js"></script>
+    <script> new WhatsappButton('5491123886977', '¿En qué te podemos ayudar?', '¡Estamos a su servicio! Su consulta no molesta.', 'Hola, quiero probar FarmaBot.', '1', '#E8EAE9', '#75C4AC', '#75C4AC', 'https://fonts.googleapis.com/css?family=Roboto&display=swap');</script> -->
 </body>
 </html>

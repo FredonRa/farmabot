@@ -5,6 +5,10 @@
     margin: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Nunito', sans-serif;
 }
@@ -382,6 +386,7 @@ section article .container .containerIconos img {
         align-items: center;
         /* justify-content: center; */
         margin: 10px auto;
+        z-index: 2;
     }
 
     #primerDiv {
@@ -467,9 +472,21 @@ section article .containerFotos .centro img {
 
 /* Wsp Button */
 
-.whatsapp_form {
-    background-color: red;
-    display: hidden;
+.wsp-icon {
+    /* display: hidden; */
+    /* background-color: red; */
+    display: flex;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    filter: drop-shadow(2px 2px 4px rgba(0,0,0,.5));
+    
+}
+
+.wsp-icon a img {
+    width: 60px;
+    height: 60px;
+    z-index: 1231231;
 }
 
 /* ----------------- */
@@ -478,7 +495,7 @@ section article .containerFotos .centro img {
 /* Footer */
 footer {
     background-color: #2e2e2e;
-    min-height: 200px;
+    min-height: 150px;
     /* display: flex;   */
     /* justify-content: space-between; */
     /* flex-wrap: wrap; */
