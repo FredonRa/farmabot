@@ -465,6 +465,16 @@ section article .containerFotos .centro img {
 
 /* ----------------- */
 
+/* Wsp Button */
+
+.whatsapp_form {
+    background-color: red;
+    display: hidden;
+}
+
+/* ----------------- */
+
+
 /* Footer */
 footer {
     background-color: #2e2e2e;
