@@ -1,6 +1,7 @@
 // import AOS from 'aos';
 // ScrollReveal().reveal('.fotoCel');
 
+AOS.init();
 
 const menuIcon = document.querySelector(".hamburger-menu");
 const navbar = document.querySelector(".navbar2");
@@ -39,9 +40,9 @@ window.addEventListener('load', (event) => {
 
 //ScrollReveal
 
-window.sr = ScrollReveal();
+// window.sr = ScrollReveal();
 
-sr.reveal('.divFade', {
-  duration: 800
-});
+// sr.reveal('.divFade', {
+//   duration: 800
+// });
 

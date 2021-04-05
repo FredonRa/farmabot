@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Plugin JS para adicionar um botão Whatsapp responsivo e personalizado">
+  <meta name="author" content="Alexsander Alves">
+  <title>whatsappButton.js - Get your button here!</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+  <script src="https://kit.fontawesome.com/9bebcca292.js"></script>
+  <link rel="stylesheet" href="node_modules/whatsapp-button.js/dist/wpp_css/whatsappButton.min.css">
+  <link rel="stylesheet" href="assets/css/main.min.css">
+</head>
+<body>
+  <div id="notCompatible" class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <div class="d-flex flex-column">
+            <h1 class="title">Whatsapp Button.js</h1>
+            <h6>is a development tool.<br>Its best use is on Desktop PCs/Notebooks.</h6>
+            <small class="text-muted usable">Some features like full live-preview may be disabled.</small>
+            <button id="understoodButton" class="btn btn-primary mt-4 align-self-center">I Understand.</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="menu">
+    <input type="checkbox" id="menuToggle">
+    <div class="menu_background"></div>
+    <label id="menuToggleLabel" for="menuToggle" class="menu_toggle menu_button">
+        <div class="menu_toggle-icon"></div>
+    </label>
+    <div class="menu_expand"></div>
+    <nav class="menu_nav">
+      <div id="menuTitle" class="menu_nav_title">Menu</div>
+      <div class="menu_nav_content">
+        <div class="menu_nav_content-front">
+          <span class="front-content"></span>
+        </div>
+      </div>
+      <ul class="menu_nav_list">
+        <li class="menu_nav_list-item"><button id="menuAbout" class="menu_nav_list-item-button">About</button></li>
+        <li class="menu_nav_list-item"><button id="menuDocumentation" class="menu_nav_list-item-button">Documentation</button></li>
+        <li class="menu_nav_list-item"><button id="menuCredits" class="menu_nav_list-item-button">Credits</button></li>
+        <li class="menu_nav_list-item"><button id="menuContact" class="menu_nav_list-item-button">Contact</button></li>
+      </ul>
+    </nav>
+  </div>
+  <div id="app" class="container app">
+    <div class="row">
+      <div class="col-md-7">
+        <main><a href="https://alvesalexsander.github.io/whatsappButton/"><h1 id="title" class="title">Whatsapp Button.js</h1></a></main>
+      </div>
+      <div class="col-md-5">
+        <div id="sloganSlider" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <h6 class="sloganText">That represents your brand.</h6>
+            </div>
+            <div class="carousel-item">
+              <h6 class="sloganText">In harmony with your layout.</h6>
+            </div>
+            <div class="carousel-item">
+              <h6 class="sloganText">A new way to keep in touch.</h6>
+            </div>
+            <div class="carousel-item">
+              <h6 class="sloganText">That is ready to deployment.</h6>
+            </div>
+            <div class="carousel-item">
+              <h6 class="sloganText">Easily customizable.</h6>
+            </div>
+            <div class="carousel-item">
+              <h6 class="sloganText">Designed for your business.</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 app_panel">
+        <form id="formPages" class="app_panel_form carousel slide" data-interval="false">
+          <h2>Customize your button!</h2>
+          <h6>Fill the fields below to fit Whatsapp Button to your needs</h3>
+          
+          <div class="carousel-inner">
+            <div class="app_panel_form-1 carousel-item active">
+              <div class="form-group">
+                <label for="phoneNumber">Phone number:</label>
+                <input class="form-control" id="phoneNumber" type="tel" placeholder="Enter only numbers." required>
+                <small id="phoneHelp" class="form-text text-muted">Only numbers. No symbols needed. e.g: 5522123456789</small>
+              </div>
+              <div class="form-group">
+                <label for="wMessage">Welcome Message:</label>
+                <input class="form-control" id="wMessage" type="text" placeholder="Average of 16 characters.">
+                <small id="wMessageHelp" class="form-text text-muted">Will be displayed when mouse is over the button.<br>Recommended: 20 or less characters</small>
+              </div>
+              <div class="form-group">
+                <label for="phMessage">Placeholder Message:</label>
+                <input class="form-control" id="phMessage" type="text" placeholder="No characters limit.">
+                <small id="phMessageHelp" class="form-text text-muted">This one will be shown while the user didn't type.</small>
+              </div>
+              <div class="form-group">
+                <label for="dMessage">Default Message:</label>
+                <input class="form-control" id="dMessage" type="text" placeholder="Starts mobile chat.">
+                <small id="dMessageHelp" class="form-text text-muted">At mobile, this message will start user's conversation.</small>
+              </div>
+              <div class="form-group">
+                <label for="iconStyle">Icon Style:</label>
+                <select name="iconStyle" class="form-control" id="iconStyle">
+                  <option value="0">Standard Material</option>
+                  <option value="1">Coloured Details</option>
+                  <option value="2">Coloured Background</option>
+                  <option value="3">Drawn Classic</option>
+                  <option value="4">Standard Flat</option>
+                </select>
+                <small id="iconStyleHelp" class="form-text text-muted">Pick an icon style of your choice.</small>
+              </div>
+            </div>
+            <div class="app_panel_form-2 carousel-item">
+              <div class="form-group">
+                <label for="mainColor">Main color:</label>
+                <input id="mainColor" type="text" class="form-control jscolor {hash:true, uppercase:false}" readonly>
+                <small id="mainColor" class="form-text text-muted">Backgrounds color!</small>
+              </div>
+              <div class="form-group">
+                <label for="subColor">Secondary color:</label>
+                <input id="subColor" type="text" class="form-control jscolor {hash:true, uppercase:false}" readonly>
+                <small id="subColor" class="form-text text-muted">Details color!</small>
+              </div>
+              <div class="form-group">
+                <label for="textColor">Text color:</label>
+                <input id="textColor" type="text" class="form-control jscolor {hash:true, uppercase:false}" readonly>
+                <small id="textColor" class="form-text text-muted">Pick a color for the typography!</small>
+              </div>
+              <div class="form-group">
+                <label for="fontFamily"><a href="https://fonts.google.com/" target="_blank" rel="noopener noreferrer" style="color: inherit"><i>Google Fonts</i></a> Family Name/URL:</label>
+                <div class="d-flex">
+                  <input class="form-control" id="fontFamily" type="text"><button id="searchFont" class="btn btn-primary"><i class="fas fa-search"></i></button><div class="lds-ring"><div></div><div></div><div></div><div></div></div></div>
+                <small class="form-text text-muted">Choose a font from <a href="https://fonts.google.com/"  target="_blank" rel="noopener noreferrer" style="color: inherit"><strong>https://fonts.google.com/</strong></a>. Either font name or URL e.g: https://fonts.googleapis.com/css?family=<strong>Roboto</strong>&display=swap</small>
+              </div>
+              <br>
+            </div>
+          </div>
+          
+          <a id="prevArrow" class="carousel-control-prev" href="#formPages" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a id="nextArrow" class="carousel-control-next" href="#formPages" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+          <ol class="carousel-indicators">
+            <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselIndicators" data-slide-to="1"></li>
+          </ol>
+        </form>
+      </div>
+      <div id="resultPages" class="col-lg-6 app_panel carousel slide" data-interval="false">
+        <div class="carousel-inner">
+          <div id="previewPage" class="carousel-item active">
+            <h2>Preview</h2>
+            <h6>This is how your button are looking like:</h3>
+          </div>
+          <div id="howToPage" class="carousel-item">
+            <h2>How to use</h2>
+            <h6>Follow the instructions below to use your button:</h3>
+          </div>
+        </div>
+        <div class="app_panel_preview">
+            <div id="previewButton" class="whatsapp_cta app_panel_preview_button">
+              <input id="form_checkbox" class="form_checkbox" type="checkbox">
+              <a class="whatsapp_button" href="#app">
+                <svg class="icon">
+                  <circle class="mainColor-fill" id="circle" cx="32" cy="32" r="31" style="fill: transparent;"></circle>
+                  <path class="mainColor-fill" id="path" d="M 7 51 l 10 7 l -11 3 z" style="fill: transparent;"></path>
+                  <use id="subColor-noFill" class="iconStyle subColor-fill" xlink:href="node_modules/whatsapp-button.js/dist/wpp_icons/My icons collection-SVG-sprite.svg#whatsapp" xlink:class="svgButtonUse"></use>
+                </svg>
+              </a>
+              <div class="whatsapp_hover">
+                <span class="hover_text wMessage mainColor-bg textColor fontFamily">Fale conosco</span>
+              </div>
+              <div class="whatsapp_form mainColor-bg">
+                <form class="form_container">
+                  <label id="send_label" class="send_label" for="send">
+                    <svg class="icon_send">
+                      <use id="subColor-fill-3"class="subColor-fill" xlink:href="node_modules/whatsapp-button.js/dist/wpp_icons/My icons collection-SVG-sprite.svg#send-button" xlink:class="svgLabelUse"></use>
+                    </svg>
+                  </label>
+                  <textarea id="mensagem" class="form_text phMessage mainColor-bg subColor-border textColor fontFamily" name="mensagem" placeholder="Como podemos te ajudar?" required=""></textarea>
+                </form>
+              </div>
+            </div>
+            <div id="howToUse" class="app_panel_preview_howToUse">
+              #1 - <strong>Install via NPM (Recommended): <br>npm install whatsapp-button.js</strong> OR Download plugin files at: 
+              <i><a href="https://github.com/alvesalexsander/whatsapp-button.js" target="_blank" rel="noopener noreferrer">whatsappButton.js page</a></i> and put it inside your <strong>node_modules</strong> folder.
+              <i><br>(path must to be <strong>node_modules/whatsapp-button.js</strong>)</i>
+              <br>#2 - Link the <strong>.CSS</strong> file with a <strong>link tag</strong> in the <strong>head tag</strong> of your application;
+              <br>#3 - Link the <strong>.JS</strong> file with a <strong>script tag</strong> in the <strong>head or body tags</strong> of your application;
+              <br>#4 - Call your button by inserting the following command in a <strong>script tag</strong> of .js file:
+              <br><i><strong><span id="jsCode"></span></strong></i>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center mt-4">
+            <button id="createButton" class="btn btn-primary align-self-center" disabled="disabled">I've done. Make my Button!</button>
+            <button id="resetButton" class="btn btn-primary" disabled="disabled"><i class="fas fa-redo-alt" aria-hidden="true"></i></button>
+        </div>
+        <div id="errorMessage" class="d-flex justify-content-center"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <!-- <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script src="./node_modules/popper.js/dist/umd/popper.min.js"></script>
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script> -->
+  <script src="assets/jscolor/jscolor.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script type="module" src="assets/js/app.js"></script>
+
+  <script src="node_modules/whatsapp-button.js/dist/wpp_js/whatsappButton.min.js"></script>
+
+</body>
+</html>

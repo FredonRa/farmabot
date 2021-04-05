@@ -380,7 +380,7 @@ section article .container .containerIconos img {
     section article .container .containerIconos div {
         width: 80%;
         align-items: center;
-        justify-content: center;
+        /* justify-content: center; */
         margin: 10px auto;
     }
 
@@ -422,6 +422,10 @@ section article .containerFotos .fotoCel img {
     width: 100%;
 }
 
+section article .containerFotos h2 {
+    margin-bottom: 20px;
+}
+
 section article .containerFotos .centro {
     display: flex;
     justify-content: center;
@@ -443,12 +447,13 @@ section article .containerFotos .centro img {
     }
     section article .containerFotos .izq{
         flex-direction: column;
+        margin: 40px 0;
     }
 }
 
 @media (min-width: 768px){
     section article .containerFotos .fotoCel img {
-        width: 400px;
+        width: 500px;
     }
 }
 
