@@ -28,7 +28,7 @@ menuIcon.addEventListener("click", () => {
 
 window.addEventListener('load', (event) => {
   setTimeout(()=>{
-    document.getElementById("holder").style.display = "none";
+    document.getElementById("loader").style.display = "none";
     document.getElementById("home").style.display = "block";
   }, 1000)
 });

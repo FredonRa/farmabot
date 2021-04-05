@@ -1,4 +1,39 @@
-.holder {
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #72ECBA;
+    z-index: 9999;
+}
+.loader-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.8;
+}
+.loader-icon img {
+    width: 40%;
+    display: inline-block;
+    animation: pulse-loader 0.4s alternate infinite ease-in-out;
+}
+
+@keyframes pulse-loader {
+    to {
+        transform: scale(0.8);
+        opacity: 0.5;
+    }
+}
+
+
+
+
+/* .holder {
     position: absolute;
     left: 0px;
     top: 0px;
@@ -10,7 +45,6 @@
     background-color: #2d2f48;
 }
 .preloader {
-   /* size */
     width: 100px;
     height: 100px;
     position: absolute;
@@ -283,4 +317,4 @@
         transform: rotateZ(-324deg);
         opacity: 1;
    }
-}
+} */
