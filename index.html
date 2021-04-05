@@ -5,11 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./favicon.ico"/>    
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="./loader.css">
+    <script src="/scrollreveal.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <title>FarmaBot</title>
 </head>
 <body>
@@ -57,14 +61,14 @@
     <section id="home">
         <article class="home" >
             <!-- <img src="./img/firuletes.png" alt=""> -->
-            <div class="texto">
+            <div class="texto" data-aos="fade-up">
                 <h1 style="font-weight: 400;">Tu <b style="font-weight: 800;">Farmacia</b> <br/> en <b style="font-weight: 800;">WhatsApp</b></h1>
                 <p>Tus clientes podrán comprarte productos, enviarte sus recetas y realizar consultas desde su WhatsApp.</p>
                 <p>Tus vendedores podrán asesorar a los clientes de forma directa y concretar sus ventas como en el mostrador.</p>
                 <p>La evolución al alcance de la mano.</p>
-                <a href="#" class="buttonProbarlo">¡Quiero Probarlo!</a>
+                <a href="https://api.whatsapp.com/send/?phone=5491123886977&text=Hola%2C+quiero+probar+FarmaBot.&app_absent=0" target="_blank" class="buttonProbarlo">¡Quiero Probarlo!</a>
             </div>
-            <video class="animate__animated animate__fadeInUp" style="margin: 0 auto;width: 90%; max-width: 500px;" autoplay loop muted playsinline>
+            <video class="animate__animated animate__fadeInUp animate__fast" style="margin: 0 auto;width: 100%; max-width: 500px;" autoplay loop muted playsinline>
                 <source src="./assets/video_sin_tarjeta_sin_sonido.webm" type="video/webm">
               </video>
         </article>
@@ -73,14 +77,14 @@
                 <div class="containerH2">
                     <h2 style="font-weight: 500; text-align: center;">Ayudamos a tu Farmacia a <b style="font-weight: 800;">evolucionar la atención.</b></h2>
                 </div>
-                <div class="containerIconos">
+                <div class="containerIconos" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
                     <div id="primerDiv">
                         <h3>Herramientas para tus colaboradores</h3>
                         <img src="./assets/undraw_real-time_sync_o57k.svg" alt="">
                         <h4>Creá tus propios equipos de trabajo</h4>
                         <p>Nuestro Helpdesk multiusuario permite que armes equipos de trabajo, para que tus colaboradores atiendan en tiempo real todas las consultas de los clientes. Podrás armar equipos de venta especificos con perfil como farmacia, perfumería o atención general. Brinda respuestas inmediatas y de calidad. Unifica toda la información en nuestro CRM.</p>
                     </div>
-                    <div>
+                    <div class="animate__animated ">
                         <h3>Integración con E-commerce</h3>
                         <img src="./assets/undraw_shopping_app_flsj.svg" alt="">
                         <h4>Ahora sí ¡comprar es simple!</h4>
@@ -99,7 +103,7 @@
             <div class="containerFotos">
                 <h2>¿Como podemos ayudarte?</h2>
                 <div class="fotoCel der">
-                    <img src="./assets/Recurso 27.png" alt="">
+                    <img src="./assets/Recurso 32.svg" alt="">
                     <div>
                         <h3>Tus productos en whatsapp</h3>
                         <p>Los clientes podrán navegar y buscar tus productos, ya se por nombre marca o categorías, podran visualizar el precio, la imagen y su oferta. podran cargar al carrito las cantidades que quieran y continuar con la compra. El proceso de compra es sumanete ágil y dinámico. sin usuarios sin claves todo 100% desde el whatsapp.</p>
@@ -161,7 +165,10 @@
             </div>
         </div>
     </footer>
-    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous"></script>
     <script src="./main.js"></script>
+    <script>
+        AOS.init();
+      </script>
 </body>
 </html>

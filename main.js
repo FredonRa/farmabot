@@ -37,4 +37,11 @@ window.addEventListener('load', (event) => {
   }, 1000)
 });
 
+//ScrollReveal
+
+window.sr = ScrollReveal();
+
+sr.reveal('.divFade', {
+  duration: 800
+});
 
