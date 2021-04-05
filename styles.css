@@ -343,6 +343,8 @@ section article .container .containerIconos div{
     filter: drop-shadow(2px 5px 6px rgba(0, 0, 0, 0.5));
     margin-top: -150px;
     overflow: hidden;
+    z-index: 1;
+    
 }
 
 section article .container .containerIconos div h3 {
@@ -480,7 +482,7 @@ section article .containerFotos .centro img {
     bottom: 40px;
     right: 40px;
     filter: drop-shadow(2px 2px 4px rgba(0,0,0,.5));
-    
+    z-index: 1231231;    
 }
 
 .wsp-icon a img {
