@@ -306,6 +306,7 @@ section .home .buttonProbarlo:hover {
 @media (max-width: 768px) {
     section .home {
         background-image: none;
+        background-color: white;
     }  
 }
 
