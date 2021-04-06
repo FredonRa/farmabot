@@ -303,6 +303,12 @@ section .home .buttonProbarlo:hover {
     }
 }
 
+@media (max-width: 768px) {
+    section .home {
+        background-image: none;
+    }  
+}
+
 /* ----------------------- */
 
 /* section iconos */
