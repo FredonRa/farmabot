@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./loader.css">
     <!-- <link href="./dist/wpp_css/whatsappButton.css" rel="stylesheet" /> -->
     <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 </head>
 <body>
     <!-- <div class="holder" id="holder">
@@ -28,7 +29,7 @@
         <div class="navbar1">
             <a href="#caracteristicas" style="color: #75C4AC;">CARACTERÍSTICAS</a>
             <!-- <a href="#">PRECIOS</a> -->
-            <a href="#">CLIENTES</a>
+            <a href="#contacto">CONTACTO</a>
         </div>
         <div class="hamburger-menu" id="hamburger-menu">
           <div class="line line-1"></div>
@@ -44,7 +45,7 @@
                     <a href="#" class="nav-link">Precios</a>
                 </li> -->
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Clientes</a>
+                    <a href="#contacto" class="nav-link">Contacto</a>
                 </li>
                 <li class="nav-item">
                     <a href="https://www.geco.com.ar/" target="_blank" class="nav-link">Geco | Technology and Services</a>
@@ -60,7 +61,9 @@
     
     <div class="wsp-icon">
         <a href="https://api.whatsapp.com/send/?phone=5491123886977&text=Hola%2C+quiero+probar+FarmaBot.&app_absent=0" target="_blank"><img src="./assets/wsp-icon.png" alt=""></a>
+        <span>👋</span>
     </div>
+
     <section id="home">
         <article class="home" >
             <!-- <img src="./img/firuletes.png" alt=""> -->
@@ -84,19 +87,19 @@
                     <h2 style="font-weight: 500; text-align: center;">Ayudamos a tu Farmacia a <b style="font-weight: 800;">evolucionar la atención.</b></h2>
                 </div>
                 <div class="containerIconos" >
-                    <div id="primerDiv" > 
+                    <div id="primerDiv" class="js-scroll slide-left"> 
                         <h3>Herramientas para tus colaboradores</h3>
                         <img src="./assets/undraw_real-time_sync_o57k.svg" alt="">
                         <h4>Creá tus propios equipos de trabajo</h4>
                         <p>Nuestro Helpdesk multiusuario permite que armes equipos de trabajo, para que tus colaboradores atiendan en tiempo real todas las consultas de los clientes. Podrás armar equipos de venta especificos con perfil como farmacia, perfumería o atención general. Brinda respuestas inmediatas y de calidad. Unifica toda la información en nuestro CRM.</p>
                     </div>
-                    <div >
+                    <div class="js-scroll fade-in">
                         <h3>Integración con E-commerce</h3>
                         <img src="./assets/undraw_shopping_app_flsj.svg" alt="">
                         <h4>Ahora sí ¡comprar es simple!</h4>
                         <p>Podés navegar el ecommerces desde el whatsApp, ver los productos y realizar compras. 100% integrado, administra las compras con retiro en sucursal y envío a domicilio. Para el universo medicinal, tus clientes podrán enviarte las recetas y tus colaboradores en tiempo real podrán confirmar disponibilidad, brindar asesoramiento y generar el cierre de ventas.</p>
                     </div>
-                    <div >
+                    <div  class="js-scroll slide-right">
                         <h3>Integración de formularios, chats y mas!</h3>
                         <img src="./assets/Recurso 21.svg" alt="">
                         <h4>Un solo canal para una mayor gestión</h4>
@@ -108,9 +111,9 @@
         </article>
         <article>
             <div class="containerFotos">
-                <h2>¿Como podemos ayudarte?</h2>
+                <h2 class="tituloContainerFotos">¿Como podemos ayudarte?</h2>
                 <div class="fotoCel der">
-                    <img src="./assets/A1.png" alt="">
+                    <img src="./assets/A1.png" class="js-scroll slide-left" alt="">
                     <div>
                         <h3>Tus productos en whatsapp</h3>
                         <p>Los clientes podrán navegar y buscar tus productos, ya se por nombre marca o categorías, podran visualizar el precio, la imagen y su oferta. podran cargar al carrito las cantidades que quieran y continuar con la compra. El proceso de compra es sumanete ágil y dinámico. sin usuarios sin claves todo 100% desde el whatsapp.</p>
@@ -121,10 +124,10 @@
                         <h3>Envío de Recetas</h3>    
                         <p>Los clientes podrán seleccionar la opción de medicamentos con o sin Obra Socila/Prepaga, indicando los datos requeridos y adjuntando la o las recetas que necesiten para que tus colaboradores puedan realziar un asesoramiento profesional, indicar costos y confirmar la compra con o sin envío.</p>
                     </div>
-                    <img src="./assets/A4.png" alt="">
+                    <img src="./assets/A4.png" class="js-scroll slide-right" alt="">
                 </div>
                 <div class="fotoCel der">
-                    <img src="./assets/A2.png" alt="">
+                    <img src="./assets/A2.png" class="js-scroll slide-left" alt="">
                     <div>
                         <h3>Contacto directo con colaboradores</h3>
                         <p>Tus colaboradores podrán responder y asesorar a los clientes en el momento, ver el historial de las consultas y derivar, resolverlas. canaliza las consultas en los equipos de profesionales que correspondan para brindar atención especializada en el momento. Podes programar los horarios de atención.</p>
@@ -136,35 +139,42 @@
                         <p>Los clientes puden selecciona el medio de pago y pagar en el momento.
                             <br>La operación de pago ademas queda 100% integrada con el Ecommerce.</p>
                     </div>
-                    <img src="./assets/A3.png" alt="">
+                    <img src="./assets/A3.png" class="js-scroll slide-right" alt="">
                 </div>
-                <div class="FotoCel">
-                    <form action="">
-                        <label for="nombreFarmacia">
-                            <input type="text" name="nombreFarmacia">
+                <div id="contacto"></div>
+                <div class="containerForm">
+                    <h2 class="tituloForm">Te interesa una demo? Escribinos!</h2>
+                    <form action="POST">
+                        <label for="nombreFarmacia" class="js-scroll slide-up">
+                            Nombre de farmacia
+                            <input type="text" id="nombreFarmacia" name="nombreFarmacia" placeholder="Ingrese el nombre de la farmacia" required>
                         </label>
-                        <label for="nombreContacto">
-                            <input type="text" name="nombreContacto">
+                        <label for="nombreContacto" class="js-scroll slide-up">
+                            Nombre de contacto
+                            <input type="text" id="nombreContacto" name="nombreContacto" placeholder="Ingrese un nombre de contacto" required>
                         </label>
-                        <label for="telefono">
-                            <input type="number" name="telefono">
+                        <label for="telefono" class="js-scroll slide-up">
+                            Teléfono
+                            <input type="number" id="telefono" name="telefono" placeholder="Ingrese un número de teléfono" required>
                         </label>
-                        <label for="">
-
-                            <input type="email">
+                        <label for="email" class="js-scroll slide-up">
+                            Email
+                            <input type="email" id="email" name="email" placeholder="Ingrese una dirección de email" required>
                         </label>
-                        <input type="number">
+                        <label for="cantSucursales" class="js-scroll slide-up">
+                            Cantidad de sucursales
+                            <input type="number" id="cantSucursales" name="cantSucursales" placeholder="Ingrese la cantidad de sucursales" required>
+                        </label>
+                        <button type="submit" id="sendContacto" class="btn js-scroll fade-in"> 
+                            ENVIAR
+                        </button>
                     </form>
                 </div>
 
-                NOMBRE DE CONTACTO: 
-TELEFONO
-MAIL
-CANTIDAD DE SUCURSALES
                 <div class="centro">
                     <div>
                         <h3>FarmaBot Una solución pensada para Farmacias</h3>
-                        <img src="./assets/Imagen_final.svg" alt="">
+                        <img src="./assets/Imagen_final.svg" class="js-scroll fade-in" alt="">
                     </div>
                 </div>
             </div>
@@ -202,11 +212,9 @@ CANTIDAD DE SUCURSALES
     <script>
         AOS.init();
     </script>
-    <script
-        src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
-        integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
-        crossorigin="anonymous">
-    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <script src="//cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.js"></script>
     <script src="./main.js"></script>
     <!-- <script src="/dist/wpp_js/whatsappButton.js"></script>
     <script> new WhatsappButton('5491123886977', '¿En qué te podemos ayudar?', '¡Estamos a su servicio! Su consulta no molesta.', 'Hola, quiero probar FarmaBot.', '1', '#E8EAE9', '#75C4AC', '#75C4AC', 'https://fonts.googleapis.com/css?family=Roboto&display=swap');</script> -->
