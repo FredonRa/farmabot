@@ -146,19 +146,12 @@ window.addEventListener("scroll", () => {
           $("#cantSucursales").addClass("is-valid");
       }
 
-
-      nombreFarmacia
-      nombreContacto
-      telefono
-      email
-      cantSucursales
-
       if (valid) {
           //$("#contactoForm").submit();
         $.ajax({
         type : 'POST',
         url : "https://helpdesk.geco.com.ar/formularioWeb/enviar",
-        data : "nombre="+$("#nombreContacto").val()+"&nombreFarmacia="+$("#nombreFarmacia").val()+"&mail="+$("#email").val()+"&telefono="+$("#telefono").val()+"&cantSucursales="+$("#cantSucursales").val()+"&canal=5",
+        data : "nombre="+$("#nombreContacto").val()+"&mail="+$("#email").val()+"&telefono="+$("#telefono").val()+"&mensaje="+"Mensaje de: "+$("#nombreFarmacia").val()+"\n Cantidad de sucursales: "+$("#cantSucursales").val()+"&canal=5",
         success: function(){
           Swal.fire(
             '¡Mensaje enviado!',

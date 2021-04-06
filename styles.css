@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap');
 
 * {
     padding: 0;
@@ -413,11 +413,12 @@ section article .container .containerH2 h2 {
 
 section article .container .containerIconos {
     display: flex;
-    align-items: flex-start;
+    align-items: flex-end;
     justify-content: space-evenly;
     padding: 40px 0;
     background: #E8EAE9;
     color: #2e2e2e;
+    /* background-color: red; */
 }
 
 section article .container .containerIconos div{
@@ -433,7 +434,6 @@ section article .container .containerIconos div{
     margin-top: -150px;
     overflow: hidden;
     z-index: 1;
-    
 }
 
 section article .container .containerIconos div h3 {
@@ -635,6 +635,7 @@ section article .containerFotos .containerForm form label input {
     color: #2e2e2e;
     font-weight: 600;
     letter-spacing: 1px;
+    font-family: 'Nunito', sans-serif;
 }
 
 section article .containerFotos .containerForm form .is-valid {
@@ -819,6 +820,7 @@ footer .containerMano {
     width: 100%;
     height: 0;
     display: flex;  
+    /* flex-direction: column; */
     align-items: flex-end;
     justify-content: center;
     /* background-color: blue; */
@@ -839,7 +841,9 @@ footer .containerRedes {
     text-align: right;
     display: none;
     flex-direction: column;
+    justify-content: center;
     align-items: flex-end;
+    width: 100%;
 }
 
 footer .containerRedes p {
@@ -877,10 +881,23 @@ footer .containerRedes .containerIconos .icono {
             justify-content: space-between;
             padding-bottom: 20px;
             margin-top: 20px;
+            /* background-color: red; */
+            width: 100%;
+        }
+
+        footer .containerMano a {
+            /* background-color: blue; */
+            width: 100%;
+            position: absolute;
         }
 
         footer .containerMano img {
-            margin-left: 20px;
+            position: relative;
+            left: 45%;
+            /* right: 100%; */
+            /* background-color: red; */
+            top: -40px;
+            /* right: 0; */
             width: 60px;
             height: auto;
         }
