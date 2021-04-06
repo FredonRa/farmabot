@@ -7,13 +7,13 @@ window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
     document.getElementById("header").style.height = "50px";
-    document.getElementById("logo").style.width = "150px";
+    document.getElementById("logo").style.width = "120px";
     menuIcon.style.top = 40;
 
     header.classList.add("headerActive");
   } else {
     document.getElementById("header").style.height = "100px";
-    document.getElementById("logo").style.width = "200px";
+    document.getElementById("logo").style.width = "170px";
     header.classList.remove("headerActive");
     document.getElementById("hamburger-menu").style.top = 60;
 
@@ -159,7 +159,7 @@ window.addEventListener("scroll", () => {
         type : 'POST',
         url : "https://helpdesk.geco.com.ar/formularioWeb/enviar",
         data : "nombre="+$("#nombreContacto").val()+"&nombreFarmacia="+$("#nombreFarmacia").val()+"&mail="+$("#email").val()+"&telefono="+$("#telefono").val()+"&cantSucursales="+$("#cantSucursales").val()+"&canal=5",
-        success: function(result){
+        success: function(){
           Swal.fire(
             '¡Mensaje enviado!',
             '',

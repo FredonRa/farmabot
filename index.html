@@ -72,7 +72,7 @@
                 <p>Tus clientes podrán comprarte productos, enviarte sus recetas y realizar consultas desde su WhatsApp.</p>
                 <p>Tus vendedores podrán asesorar a los clientes de forma directa y concretar sus ventas como en el mostrador.</p>
                 <p>La evolución al alcance de la mano.</p>
-                <a href="https://api.whatsapp.com/send/?phone=5491123886977&text=Hola%2C+quiero+probar+FarmaBot.&app_absent=0" target="_blank" class="buttonProbarlo">¡Quiero Probarlo!</a>
+                <a href="https://api.whatsapp.com/send/?phone=5491123886977&text=Hola%2C+quiero+probar+FarmaBot.&app_absent=0" target="_blank" class="buttonProbarlo">¡Quiero <b>Probarlo!</b></a>
             </div>
             <video class="animate__animated animate__fadeInUp animate__fast" style="margin: 0 auto;width: 100%; max-width: 500px;" autoplay loop muted playsinline>
                 <source src="./assets/video_sin_tarjeta_sin_sonido.webm">
@@ -82,6 +82,7 @@
             </video>
         </article>
         <article>
+            <div id="caracteristicas"></div>
             <div class="container">
                 <div class="containerH2">
                     <h2 style="font-weight: 500; text-align: center;">Ayudamos a tu Farmacia a <b style="font-weight: 800;">evolucionar la atención.</b></h2>
@@ -106,7 +107,6 @@
                         <p>Unificá todas las comunicaciones en un herramienta. Analizá los canales de contacto, el seguimiento y resolución de cada comunicación. Todo tu equipo trabjando con la información de tus clientes para hacer un seguimiento 100% eficiente y optimizar tu gestión comercial.</p>
                     </div>
                 </div>
-                <div id="caracteristicas"></div>
             </div>
         </article>
         <article>
@@ -143,7 +143,7 @@
                 </div>
                 <div id="contacto"></div>
                 <div class="containerForm">
-                    <h2 class="tituloForm">Te interesa una demo? Escribinos!</h2>
+                    <h2 class="tituloForm">Te interesa una demo? <br> Escribinos!</h2>
                     <form action="POST">
                         <label for="nombreFarmacia" class="js-scroll slide-up">
                             Nombre de farmacia
@@ -155,7 +155,7 @@
                         </label>
                         <label for="telefono" class="js-scroll slide-up">
                             Teléfono
-                            <input type="number" id="telefono" name="telefono" placeholder="Ingrese un número de teléfono" required>
+                            <input type="number" id="telefono" name="telefono" placeholder="Ingrese un número de teléfono" min="0" inputmode="numeric" pattern="[0-9]*" title="Non-negative integral number" required>
                         </label>
                         <label for="email" class="js-scroll slide-up">
                             Email
@@ -163,7 +163,7 @@
                         </label>
                         <label for="cantSucursales" class="js-scroll slide-up">
                             Cantidad de sucursales
-                            <input type="number" id="cantSucursales" name="cantSucursales" placeholder="Ingrese la cantidad de sucursales" required>
+                            <input type="number" id="cantSucursales" name="cantSucursales" placeholder="Ingrese la cantidad de sucursales" min="0" inputmode="numeric" pattern="[0-9]*" title="Non-negative integral number" required>
                         </label>
                         <button type="submit" id="sendContacto" class="btn js-scroll fade-in"> 
                             ENVIAR
@@ -173,7 +173,7 @@
 
                 <div class="centro">
                     <div>
-                        <h3>FarmaBot Una solución pensada para Farmacias</h3>
+                        <h3>FarmaBot <br> Una solución pensada para Farmacias</h3>
                         <img src="./assets/Imagen_final.svg" class="js-scroll fade-in" alt="">
                     </div>
                 </div>

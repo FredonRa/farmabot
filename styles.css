@@ -146,6 +146,7 @@ body::-webkit-scrollbar-track {
 
 .header img {
     padding-left: 40px;
+    padding-top: 10px;
     width: 200px;
     transition: all .2s;
 }
@@ -322,7 +323,7 @@ section .home .texto {
 
 section .home .texto h1 {
     font-size: 42px;
-    line-height: 150%;
+    line-height: 120%;
     color: #112533;
 }
 
@@ -330,6 +331,7 @@ section .home .texto p {
     margin: 10px 0;
     font-size: 18px;
     color: #8B9093;
+    text-align: justify;
 }
 
 section .home .buttonProbarlo {
@@ -340,7 +342,7 @@ section .home .buttonProbarlo {
     color: #6DC1A8;
     text-align: center;
     padding: 13px 20px;
-    border-radius: 8px;
+    border-radius: 5px;
     font-weight: 600;
     font-size: 18px;
     margin-top: 30px;
@@ -450,13 +452,14 @@ section article .container .containerIconos div h3 {
 }
 
 section article .container .containerIconos div h4 {
-    color: #458478;
+    color: #2e2e2e;
 }
 
 
 section article .container .containerIconos div p {
-    text-align: center;
+    text-align: justify;
     margin-top: 10px;
+    padding: 0 10px;
 }
 
 section article .container .containerIconos img {
@@ -512,8 +515,15 @@ section article .containerFotos .fotoCel div {
     width: 300px;
 }
 
+section article .containerFotos .fotoCel div p {
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+
 section article .containerFotos .fotoCel img {
     width: 100%;
+    margin-bottom: 30px;
 }
 
 section article .containerFotos h2 {
