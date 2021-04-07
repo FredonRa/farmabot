@@ -328,7 +328,7 @@ section .home .texto h1 {
 }
 
 section .home .texto p {
-    margin: 10px 0;
+    margin: 5px 0;
     font-size: 18px;
     color: #8B9093;
     text-align: justify;
